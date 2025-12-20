@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Nivel 21!</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fondo con scroll infinito -->
+    <div class="scrolling-bg-container">
+        <div class="scrolling-bg"></div>
+        <div class="scrolling-bg"></div>
+    </div>
+    
+    <div class="background-overlay"></div>
+    <div class="fireflies"></div>
+
+    <main class="card">
+        <header>
+            <h1 class="glitch" data-text="NIVEL 21 DESBLOQUEADO">LEVEL 21 UNLOCKED</h1>
+            <p class="subtitle">¡Feliz Cumpleaños, Primo!</p>
+        </header>
+
+        <section class="loot-box">
+            <div class="lock-icon">
+                <img src="terraria-lock.png" alt="Terraria Chest" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                <span class="fallback-emoji">🌲🗝️🌲</span>
+            </div>
+            
+            <div class="status-message">
+                <p>Tu <strong>Loot Legendario</strong> está siendo crafteado...</p>
+                <small class="server-status">Estado del servidor: <span>Enfriando motor de Steam...</span></small>
+            </div>
+        </section>
+
+        <section class="timer-container">
+            <p>Tiempo restante para el drop:</p>
+            <div id="countdown">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <span class="label">Días</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <span class="label">Hrs</span>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <span class="label">Min</span>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <span class="label">Seg</span>
+                </div>
+            </div>
+        </section>
+
+        <button id="btn-claim" class="pixel-btn">RECLAMAR AHORA</button>
+        
+        <!-- Botón para mostrar foto -->
+        <button id="btn-show-photo" class="pixel-btn photo-btn">VER PISTA 🤠</button>
+        
+        <p id="error-msg" class="hidden">⛔ ¡Error! Nivel de maná insuficiente. Espera al contador.</p>
+    </main>
+
+    <!-- Modal para la foto -->
+    <div id="photo-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>¡Falla de Logistica!</h2>
+                <p>Debia llegar hoy 😒</p>
+                <p>Lo compré y tengo que esperar pipipi</p>
+            </div>
+              <img src="captura.png" 
+                  alt="Foto especial" 
+                  class="modal-photo"
+                  onerror="this.src='https://placehold.co/600x400/20bf6b/1a1a2e?text=Captura+no+encontrada'">
+            <div class="modal-footer">
+                <p>¡Feliz cumpleaños, primo! 🎮🎂</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
