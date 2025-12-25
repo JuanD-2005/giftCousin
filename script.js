@@ -1,6 +1,6 @@
 // CONFIGURACIÓN:
 // Cambia esta fecha a la fecha exacta en que se libera el regalo (dentro de 7 días)
-const unlockDate = new Date("December 25, 2025 18:00:00").getTime();
+const unlockDate = new Date("December 25, 2025 20:00:00").getTime();
 
 // Elementos del DOM
 const daysEl = document.getElementById("days");
